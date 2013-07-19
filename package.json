@@ -1,0 +1,23 @@
+{
+  "name": "wrapup-partition",
+  "version": "0.0.1",
+  "description": "Convert Node/CommonJS modules for the browser with on demand loading of JS files",
+  "main": "index.js",
+  "dependencies": {
+    "wrapup": "0.13",
+    "prime": "0.2",
+    "async": "0.2",
+    "mkdirp": "~0.3.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "wrapup",
+    "browser",
+    "commonjs"
+  ],
+  "author": "Arian Stolwijk",
+  "license": "MIT"
+}
