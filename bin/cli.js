@@ -19,6 +19,11 @@ program.command('partition')
         }
 
         var partition = new Partition()
+
+        partition.on('warn', function(err){
+            console.log("WARN: " + err.message)
+        })
+
         partition.set('output', args.output)
         partition.set('path', args.path)
 
