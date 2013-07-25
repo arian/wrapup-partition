@@ -3,9 +3,10 @@
     var modules = map.modules, files = map.files
     var paths = {}
     for (var name in modules){
-        paths[name] = files[modules[name]]
+        paths[name] = files[modules[name]].slice(0, -3)
     }
-    curl({
+    window.global = window
+    requirejs.config({
         paths: paths
-    }, [])
+    })
 })()
