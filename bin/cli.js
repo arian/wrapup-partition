@@ -7,7 +7,7 @@ var wrapup = program.wrapup
 var Partition = require('../lib/partition')
 
 program.command('partition')
-    .description('convert the modules to a partitioned AMD-lik format')
+    .description('convert the modules to a partitioned AMD-like format')
     .option('-o, --output <path>', 'Output directory')
     .option('--path <path>', 'The base path of the modules, so <path>/bar/foo.js becomes bar/foo as module ID')
     .option('--map <file>', 'A JSON file containing the mapping of the modules')
