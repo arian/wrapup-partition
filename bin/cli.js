@@ -42,7 +42,11 @@ program.command('partition')
 
         wrapup.withOutput(partition)
         wrapup.up(function(err, str){
-            console.log(err, str)
+            if (err) throw err
+            console.log('wrote files:')
+            str.forEach(function(file){
+                console.log(' - ' + file)
+            })
         })
     })
 
