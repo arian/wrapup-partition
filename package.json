@@ -1,6 +1,6 @@
 {
   "name": "wrapup-partition",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Convert Node/CommonJS modules for the browser with on demand loading of JS files",
   "main": "lib/partition.js",
   "bin": {
