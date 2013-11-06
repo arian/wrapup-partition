@@ -1,4 +1,4 @@
-wrapup-partiotion
+wrapup-partition
 =================
 
 Transform CommonJS modules to combined AMD (requirejs) files. Pack multiple
@@ -36,7 +36,7 @@ output file. Here you can group files together.
 Modules required by a file specified in this configuration are added to that
 file if this module isn't required by some other module.
 
-For example consider this tree:
+For example consider this graph:
 
 ```
         homepage      tweetDialog
@@ -115,7 +115,7 @@ instead of:
 
 ```js
 define('tweetDialog', ['require', 'exports', 'module', 'parseTweetText'], function(r, e, m){
-	var parse = r('parseTweetText4');
+	var parse = r('parseTweetText');
 	e.open = function() { /* ... */ };
 });
 ```
@@ -124,7 +124,7 @@ When you require the `wrapup-names` you will get an object like:
 
 ```json
 {
-  'c': 'tweetDialog',
-  'd': 'parseTweetText'
+  "c": "tweetDialog",
+  "d": "parseTweetText"
 }
 ```
