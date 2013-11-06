@@ -12,6 +12,7 @@ program.command('partition')
     .option('--path <path>', 'The base path of the modules, so <path>/bar/foo.js becomes bar/foo as module ID')
     .option('--map <file>', 'A JSON file containing the mapping of the modules')
     .option('--ast', 'Output the Abstract Syntax Tree as JSON')
+    .option('--compress', 'Compress module names')
     .action(function(args){
 
         if (!args.output){
@@ -28,6 +29,7 @@ program.command('partition')
         partition.set('output', args.output)
         partition.set('path', args.path)
         partition.set('ast', args.ast)
+        partition.set('compress', args.compress)
 
         if (args.map){
             var map = JSON.parse(fs.readFileSync(args.map))
