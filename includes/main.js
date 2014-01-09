@@ -15,7 +15,9 @@
     define('wrapup-require', function(){
         return function(ids, success, error){
             for (var i = 0; i < ids.length; i++) {
-                ids[i] = defines[ids[i]]
+                if (defines.hasOwnProperty(ids[i])) {
+                    ids[i] = defines[ids[i]]
+                }
             }
             requirejs(ids, success, error)
         }
