@@ -1,7 +1,7 @@
 "use strict";
 
 var fs = require('fs')
-var forOwn = require('prime/object/forOwn')
+var forOwn = require('mout/object/forOwn')
 var program = require('wrapup/bin/cli')
 var wrapup = program.wrapup
 var Partition = require('../lib/partition')
